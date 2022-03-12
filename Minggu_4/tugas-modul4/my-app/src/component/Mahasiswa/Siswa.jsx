@@ -9,10 +9,10 @@ const Siswa = (props) => {
             <div className="konten-mahasiswa">
             <div className="nim-mahasiswa">{props.NIM}</div>
                 <div className="nama-mahasiswa">{props.nama}</div>
-                <p className="alamat-mahasiswa">{props.alamat}</p>
-                <p className="hp-mahasiswa">{props.hp}</p>
-                <p className="angkatan-mahasiswa">{props.angkatan}</p>
-                <p className="status-mahasiswa">{props.status}</p>
+                <div className="alamat-mahasiswa">{props.alamat}</div>
+                <div className="hp-mahasiswa">{props.hp}</div>
+                <div className="angkatan-mahasiswa">{props.angkatan}</div>
+                <div className="status-mahasiswa">{props.status}</div>
                 <button className="btn btn-sm btn-warning" onClick={() => props.hapusMahasiswa(props.idMahasiswa)}>Hapus</button>
             </div>
         </div>
