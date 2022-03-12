@@ -1,0 +1,39 @@
+{
+  "mahasiswa": [
+    {
+      "NIM": 180823453,
+      "nama": "Mahasiswa 1",
+      "alamat": "Jl. Soekarno Hatta No. 9 Malang",
+      "hp": "081802023249",
+      "angkatan": 2018,
+      "status": "aktif"
+    },
+    {
+      "NIM": 140823453,
+      "nama": "Mahasiswa X",
+      "alamat": "Jl. Menur No. 9 Surabaya",
+      "hp": "081802023523",
+      "angkatan": 2014,
+      "status": "lulus"
+    },
+    {
+      "NIM": "1941720037",
+      "nama": "Eksa Lailia",
+      "alamat": "Jl. Masjid Raya No. 8 Kuncen, Madiun",
+      "hp": "085704258647",
+      "angkatan": "2019",
+      "status": "Aktif",
+      "id": 1647065799856
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
