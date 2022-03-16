@@ -1,14 +1,7 @@
 {
   "mahasiswa": [
     {
-      "NIM": 180823453,
-      "nama": "Mahasiswa 1",
-      "alamat": "Jl. Soekarno Hatta No. 9 Malang",
-      "hp": "081802023249",
-      "angkatan": 2018,
-      "status": "aktif"
-    },
-    {
+      "id": 2,
       "NIM": 140823453,
       "nama": "Mahasiswa X",
       "alamat": "Jl. Menur No. 9 Surabaya",
@@ -17,13 +10,31 @@
       "status": "lulus"
     },
     {
+      "NIM": "1941703398",
+      "nama": "Lalisa Manoban",
+      "alamat": "Jl. Pegangsaan Timur No. 8",
+      "hp": "089770546332",
+      "angkatan": "2016",
+      "status": "Lulus",
+      "id": 1647389190941
+    },
+    {
+      "NIM": "1941703399",
+      "nama": "Rose",
+      "alamat": "Jl. Kapitan Patimura No. 9",
+      "hp": "087880345678",
+      "angkatan": "2016",
+      "status": "Lulus",
+      "id": 1647389259060
+    },
+    {
       "NIM": "1941720037",
       "nama": "Eksa Lailia",
-      "alamat": "Jl. Masjid Raya No. 8 Kuncen, Madiun",
+      "alamat": "Jl. Masjid Raya No. 8",
       "hp": "085704258647",
       "angkatan": "2019",
       "status": "Aktif",
-      "id": 1647065799856
+      "id": 1647389704402
     }
   ],
   "comments": [
