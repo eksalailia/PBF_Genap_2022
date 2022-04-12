@@ -32,6 +32,7 @@ class BlogPost extends Component{
             this.ambilDataDariAPI();
           });
       };
+    
 
     handleTambahArtikel = (event) => {
         let formInsertArtikel = {...this.state.insertArtikel};
