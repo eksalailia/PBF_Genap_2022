@@ -14,6 +14,7 @@ const Siswa = (props) => {
                 <div className="angkatan-mahasiswa">{props.angkatan}</div>
                 <div className="status-mahasiswa">{props.status}</div>
                 <button className="btn btn-sm btn-warning" onClick={() => props.hapusMahasiswa(props.idMahasiswa)}>Hapus</button>
+
             </div>
         </div>
     )

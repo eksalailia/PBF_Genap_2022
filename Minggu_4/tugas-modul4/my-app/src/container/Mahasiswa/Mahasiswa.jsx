@@ -60,7 +60,6 @@ class Mahasiswa extends Component{
             })
     }
 
-
     render() {
         return(
             <div class="post-mahasiswa">
@@ -110,6 +109,7 @@ class Mahasiswa extends Component{
                 </div>
                     <h2>Daftar Mahasiswa</h2>
                     {
+                        
                         this.state.listMahasiswa.map(mahasiswa => {
                                     return <Siswa key={mahasiswa.NIM} 
                                     NIM={mahasiswa.NIM}
@@ -118,6 +118,7 @@ class Mahasiswa extends Component{
                                     hp = {mahasiswa.hp} 
                                     angkatan = {mahasiswa.angkatan} 
                                     status = {mahasiswa.status} idMahasiswa={mahasiswa.id} hapusMahasiswa={this.handleHapusMahasiswa}/>
+
                         })
                     }
             </div>
