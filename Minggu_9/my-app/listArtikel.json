@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1650508182816,
+      "title": "ikon",
+      "body": "comeback"
+    },
+    {
+      "userId": 1,
+      "id": 1650508194679,
+      "title": "treasure",
+      "body": "konser"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
