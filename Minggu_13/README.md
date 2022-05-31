@@ -1,2 +1,2 @@
 # react-firestore
-Berikut adalah contoh CRUD menggunakan React dan Firestore
+Login & Register belum bisa ke firebase hanya tampilan
