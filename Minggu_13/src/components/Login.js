@@ -20,7 +20,7 @@ class Login extends Component {
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then(res=>{
             alert('Login Berhasil !');
-                this.props.history.push('/dashboard');
+                this.props.history.push('/');
         })
         .catch(error=>{
             alert(error.message)
