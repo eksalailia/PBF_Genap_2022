@@ -1,28 +1,57 @@
-import React, { Component } from 'react';
-import { Button, Container, Grid, TextField } from '@material-ui/core'
-import { Link } from 'react-router-dom'
-import Registrasi from './Registrasi';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import './Login.css';
+import firebase from '../../src/Firebase'
 
 class Login extends Component {
-    render(){
-        // const {email, password} = this.state
-        return(
-            <div className="card-login">
-                <Grid container justify="center">
-                    <Grid xs="12" md="8" lg="4">
-                        <h2 className="judul-login"> Login ! </h2>
-                        {/* <form onSubmit={this.handleSubmit}> */}
-                            <TextField type="email" fullWidth margin="dense" variant="outlined" size="small"  name="email" label="Email" required />
-                            <TextField type="password" fullWidth margin="dense" variant="outlined" size="small" name="password" label="Password" required />
-                            <Button type="submit" fullWidth variant="contained" color="primary">Login</Button>
-                        {/* </form> */}
-                        <p>Belum punya akun? <Link to="/registrasi">Registrasi</Link></p>
-                    </Grid>
-                </Grid>
-            </div>
-        )
-    }
-}
 
-export default Login;
+    state = {
+        email: '',
+        password: ''
+    }
+
+    handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const { email, password } = this.state
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(res=>{
+            alert('Login Berhasil !');
+                this.props.history.push('/dashboard');
+        })
+        .catch(error=>{
+            alert(error.message)
+        })
+    }
+
+    render() {
+        const { email, password } = this.state
+        return (
+            <div>
+                {/* <h1 class="judullog">Silahkan Login</h1> */}
+                <form class="formlog"onSubmit={this.handleSubmit}>
+                    <div className="containerlog">
+                    <div className="imgcontainer">
+                        <h2><b>Silahkan Login</b></h2>
+                    </div>
+                        <label><b>Email</b></label>
+                        <input class="inputlog" type="text" placeholder="Enter Email" name="email" value={email} onChange={this.handleChange} required />
+                        <label><b>Password</b></label>
+                        <input class="inputpass" type="password" placeholder="Enter Password" name="password" value={password} onChange={this.handleChange} required />
+                        <button class="buttonlog" type="submit">Login</button>
+                    </div>
+                    <div className="containerlog" style={{ backgroundColor: '#f1f1f1' }}>
+                        {/* <button type="button" className="containerlog"><Link to="/registrasi">Belum Punya Akun?</Link></button> */}
+                        {/* <button type="button" class="buttonlog"><Link to="/registrasi">Belum Punya Akun?</Link></button> */}
+                        <p>Belum punya akun? <Link to="/registrasi">Registrasi</Link></p>
+                    </div>
+                </form>
+            </div>
+        );
+    }
+
+}
+export default Login; 

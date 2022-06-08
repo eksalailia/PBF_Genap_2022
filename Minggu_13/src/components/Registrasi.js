@@ -3,26 +3,55 @@ import { Button, Container, Grid, TextField } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import Login from './Login';
 import './Registrasi.css';
+import firebase from '../Firebase';
 
-class Register extends Component {
-    render(){
-        // const {email, password} = this.state
-        return(
-            <div className="card-register">
-                <Grid container justify="center">
-                    <Grid xs="12" md="8" lg="4">
-                        <h2 className="judul-register"> Registrasi !</h2>
-                        {/* <form onSubmit={this.handleSubmit}> */}
-                            <TextField type="email" fullWidth margin="dense" variant="outlined" size="small"  name="email" label="Email" required />
-                            <TextField type="password" fullWidth margin="dense" variant="outlined" size="small" name="password" label="Password" required />
-                            <Button type="submit" fullWidth variant="contained" color="primary">Registrasi</Button>
-                        {/* </form> */}
-                        <p>Sudah punya akun? <Link to="/login">Login</Link></p>
-                    </Grid>
-                </Grid>
-            </div>
-        )
+class Registrasi extends Component {
+
+    state = {
+        email: '',
+        password: ''
     }
+    handleChange = (e) =>{
+        this.setState({[e.target.name]: e.target.value})
+    }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const {email, password} = this.state
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(res=>{
+            alert('Registrasi Berhasil !');
+                this.props.history.push('/login');
+        })
+        .catch(error=>{
+            alert(error.message)
+        })
+    }
+
+    render() {
+        const {email, password} =this.state
+        return (
+            <div>
+                {/* <h1 className="judulreg">Registrasi</h1> */}
+                <form class="formreg"onSubmit={this.handleSubmit}>
+                <div className="imgcontainer">
+                        <h2><b>Registrasi !</b></h2>
+                    </div>
+                    <div className="container">
+                        <label><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" value={email} onChange={this.handleChange} required />
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" value={password} onChange={this.handleChange} required />
+                        <button class="buttonreg"type="submit">Registrasi</button>
+                    </div>
+                    <div className="container" style={{ backgroundColor: '#f1f1f1' }}>
+                    <p>Punya akun? <Link to="/login">Login</Link></p>
+                    </div>
+                </form>
+            </div>
+        );
+    }
+
 }
 
-export default Register;
+export default Registrasi;
+

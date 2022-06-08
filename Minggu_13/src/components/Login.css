@@ -1,17 +1,76 @@
-.judul-login{
+.formlog {
+    border: 3px solid #8b8787;
+    width: 350px;
+    margin:auto;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 85px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.judullog{
     text-align: center;
-    margin-top: 50px;
+    margin: 30px auto;
 }
 
-.card-login{
-    background: #a7c6d7;
-    border-radius: auto;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-    height: auto;
-    margin-top: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
+.inputlog[type=text], .inputpass[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(204, 204, 204);
+    box-sizing: border-box;
+}
+
+.buttonlog {
+    background-color: #006666;
+    color: #FFFFFF;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.buttonlog:hover {
+    opacity: 0.8;
+}
+
+.cancelbtnlog {
     width: auto;
-    padding: 12px 44px;
+    padding: 10px 18px;
+    background-color: #f44336;
 }
 
+.imgcontainerlog {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatarlog {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.containerlog {
+    padding: 16px;
+
+}
+
+.buttonlog {
+
+        background-color: #006666;
+        color: #FFFFFF;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+
+span.pswlog {
+    float: right;
+    padding-top: 16px;
+} 
