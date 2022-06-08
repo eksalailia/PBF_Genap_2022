@@ -7,6 +7,7 @@
     margin-right: auto;
     margin-top: 85px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 
 .judullog{
@@ -24,7 +25,7 @@
 }
 
 .buttonlog {
-    background-color: #006666;
+    background-color: #18ac67;
     color: #FFFFFF;
     padding: 14px 20px;
     margin: 8px 0;
@@ -60,7 +61,7 @@ img.avatarlog {
 
 .buttonlog {
 
-        background-color: #006666;
+        background-color: #299444;
         color: #FFFFFF;
         padding: 14px 20px;
         margin: 8px 0;
